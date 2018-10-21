@@ -13,13 +13,13 @@ class Validator {
 	}
 
 	public function checkLogin($login, $result) {
-		if(empty($login)) echo "enter login <br>";
+		if(empty($login)) echo "<p class=\"d-flex justify-content-center alert alert-danger\">enter login</p> <br>";
 		if($login == $result['login']) return true;
 		return false;
 	}
 
 	public function checkPass($password, $result) {
-		if(empty($password)) echo "enter password <br>";
+		if(empty($password)) echo "<p class=\"d-flex justify-content-center alert alert-danger\">enter password</p> <br>";
 		if($login == $result['password']) return true;
 		return false;
 	}

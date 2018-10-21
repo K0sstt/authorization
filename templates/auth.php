@@ -8,20 +8,30 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="templates/style.css">
+
   <title>Hello, world!</title>
 </head>
 <body>
-  <form action="index.php" method="post">
-    <div class="form-group">
-      <label for="formGroupExampleInput">Email address</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="NickName" name="login">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-center">
+      <form action="index.php" method="post">
+        <div class="form-group">
+          <label for="formGroupExampleInput">Email address</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="NickName" name="login">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="exampleInputPassword">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" name="password">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  </div>
+  
+
+  <br>
+  
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
