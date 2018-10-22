@@ -8,19 +8,33 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="style.css">
+
   <title>Hello, world!</title>
 </head>
 <body>
 
-<div class="container">
-	<div class="row">
-		<div class="col-4"></div>
-		<div class="col-4 d-flex justify-content-center">
-			<h1>you are blocked</h1>
-		</div>
-		<div class="col-4"></div>
-	</div>
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <div class="d-flex justify-content-center">
+          <h1>you are blocked</h1>
+        </div>
+        <div class="d-flex justify-content-center">
+          <h4>wait 10 seconds</h4>
+        </div>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4 d-flex justify-content-center">
+        <a href="../index.php">BACK</a>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
