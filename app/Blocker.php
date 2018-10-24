@@ -6,13 +6,15 @@ class Blocker {
 	public $ipBlock = [];
 
 	public function checkSessionCount() {
-		if(empty($_SESSION['count'])) $_SESSION['count'] = 1;
+
+		if($_SESSION['count'] < 3) {
+			include 'templates/auth.php';
+		}
+
 		if($_SESSION['count'] == 3) {
-			header('Location: http://authorization.loc/templates/block.php');
 			$this->checkIp();
 			$this->blockingIP();
 		}
-		else $_SESSION['count']++;
 	}
 
 	public function checkIp() {
@@ -25,6 +27,8 @@ class Blocker {
 				unset($this->ipBlock[$i]);
 				$_SESSION['count'] = 1;
 					// $this->ipBlock[$i] = $this->ipBlock[$i+1];
+			} else {
+				include_once 'templates/block.php';
 			}
 		}
 	}

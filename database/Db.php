@@ -1,10 +1,9 @@
 <?php
 
-// namespace database;
-
 class Db {
 
 	protected $db;
+	public $users = [];
 
 	public function __construct() {
 
@@ -21,6 +20,13 @@ class Db {
 	public function query($sql) {
 		$query = $this->db->query($sql);
 		return $result = $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function getUsers() {
+		foreach($this->query('SELECT * FROM user') as $user) {
+			$users[] = $user;
+		}
+		return $users;
 	}
 	
 }
